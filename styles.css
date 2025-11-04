@@ -108,14 +108,14 @@ header {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: #3b3836;
+    color: #d15e12;
 }
 
 .shoes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -123,9 +123,31 @@ header {
     background-color: #3b3836;
     padding: 2rem;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     transition: 0.5s;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.shoes-card .shoes-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.shoes-card .shoes-desc {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 1rem
+}
+
+.shoes-card .shoes-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #d15e12;
 }
 
 .shoes-card:hover {
@@ -133,7 +155,9 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 .shoes-card img {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    color: #3b3836;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
 }
