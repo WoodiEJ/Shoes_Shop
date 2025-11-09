@@ -18,16 +18,24 @@
         <nav class="nav-bar">
             <div class="logo">Shoes Shop</div>
             <ul class="nav-options">
-                <li id="home"><a>Home</a></li>
-                <li id="category"><a>Categoria</a></li>
-                <li id="us"><a>Sobre Nós</a></li>
-                <li id="contact"><a>Contato</a></li>
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#category">Categoria</a>
+
+                    <div class="dropdown-content">
+                        <a href="#casuais">Tênis Casuais</a>
+                        <a href="#esportivo">Tênis Esportivos</a>
+                        <a href="#performance">Tênis de Performance</a>
+                    </div>
+                </li>
+                <li><a href="#us">Sobre Nós</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="welcome">
+        <section class="welcome" id="#home">
             <div class="welcome-content">
                 <h1>Shoes Shop</h1>
                 <p>Na Shoes Shop você terá todos seus calçados nas suas mãos!!</p>
@@ -49,7 +57,7 @@
                             mundo
                             dos tênis e continua sendo um dos mais desejados até hoje.
                         </p>
-                        <span class="price">R$ 350</span>
+                        <span class="price">R$ 30</span>
                     </article>
                 
 
