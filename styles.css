@@ -248,3 +248,214 @@ header {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.category-content {
+    padding: 6rem 2rem;
+}
+
+.tab-navigation {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+} 
+
+.tab-button {
+    border: none;
+    background-color: #3b3836;
+    color: #d15e12;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: black;
+}
+
+.tab-button.active {
+    background-color: #d15e12;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+    padding: 2rem;
+    border-radius: 5px;
+    color: #333;
+}
+
+.tab-content.active {
+    display: grid;
+    grid-template-columns: min-content();
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-card {
+    background-color: #3b3836;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.logo-brand {
+    height: 120px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    filter: brightness(0) invert(1);
+    transition: filter 0.32 ease;
+}
+
+.brand-card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #d15e12;
+    text-align: center;
+    margin-bottom: 0;
+    transition: color 0.3 ease;
+}
+
+.brand-card:hover {
+    background-color: #d15e12;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(209, 94, 18, 0.4);
+}
+
+.brand-card:hover p {
+    color: #fff;
+}
+
+.brand-card:hover .logo-brand {
+    filter: brightness(0) invert(1);
+}
+
+/* Adicione este código no FINAL do seu arquivo styles.css */
+
+@media (max-width: 768px) {
+
+    /* --- Header & Navegação --- */
+    header {
+        position: static; /* Remove a barra fixa, facilita no celular */
+    }
+
+    .nav-bar {
+        flex-direction: column; /* Empilha o logo e os links */
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .nav-options {
+        flex-direction: column; /* Empilha as opções de navegação */
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-options li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* --- Dropdown --- */
+    /* NOTA: Menus :hover não funcionam em telas de toque.
+      Esta é uma solução CSS-only que faz os sub-itens aparecerem
+      estaticamente abaixo do item "Categoria".
+    */
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dropdown-content {
+        display: block;
+        position: static; /* Remove o posicionamento absoluto */
+        background-color: transparent; /* Fundo transparente */
+        box-shadow: none; /* Remove a sombra */
+        min-width: auto;
+        border-radius: 0;
+        margin-top: 10px; /* Adiciona um espaço */
+    }
+
+    .dropdown-content a {
+        padding: 10px 0;
+        color: #ccc; /* Cor mais sutil para sub-itens */
+        text-align: center;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #d15e12;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+
+    /* --- Seção Welcome (Home) --- */
+    .welcome {
+        height: auto; /* Altura automática */
+        padding: 6rem 1rem; /* Ajusta o padding */
+        text-align: center;
+    }
+
+    .welcome-content h1 {
+        font-size: 2.2rem; /* Reduz a fonte principal */
+    }
+
+    .welcome-content p {
+        font-size: 1.1rem; /* Reduz a fonte do parágrafo */
+    }
+
+    /* --- Fontes das Seções --- */
+    .shoes h1,
+    .us-content h3,
+    .contact-content h3,
+    .category-content h1 {
+        font-size: 1.8rem; /* Reduz fontes de título de seção */
+    }
+
+    .us-content p,
+    .contact-content p {
+        font-size: 1rem; /* Reduz fontes de parágrafo de seção */
+    }
+
+    /* --- Padding Geral das Seções --- */
+    .shoes,
+    .us-content,
+    .contact-content,
+    .category-content {
+        padding: 3rem 1rem; /* Reduz padding lateral e vertical */
+    }
+
+    /* --- Página de Categoria (Abas) --- */
+    .tab-navigation {
+        flex-direction: column; /* Empilha os botões de categoria */
+        gap: 1rem;
+    }
+
+    .tab-button {
+        width: 100%; /* Botões ocupam largura total */
+    }
+
+    /* Seus grids (.shoes-grid e .brand-grid) já são responsivos
+      devido ao 'auto-fit' e 'minmax'. Nenhum ajuste é necessário lá!
+    */
+}
